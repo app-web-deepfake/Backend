@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "vercel-build": "echo 'Build complete'"
+    "convert-yaml": "node scripts/convert-yaml.js",
+    "prebuild": "npm run convert-yaml",
+    "vercel-build": "npm run convert-yaml"
   },
   "engines": {
     "node": ">=18.0.0"
